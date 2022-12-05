@@ -1,0 +1,22 @@
+.tabela{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+.tabela th,td{
+border: 1px solid;
+}
+
+.acoes{
+  text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+}
+
+.atualizar_time{
+  margin-right: .5em;
+}

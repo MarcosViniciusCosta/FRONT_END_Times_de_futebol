@@ -1,0 +1,9 @@
+<div class="mensagens" *ngIf="mensagensService.getMensagem()">
+  <div class="cabecalho_mensagens">
+    <h2> mensagem do sistema </h2>
+    <button class="limpar" (click)="mensagensService.limparMensagem()">
+      <h3>X</h3>
+    </button>
+  </div>
+  <p> {{mensagensService.getMensagem()}}</p>
+</div>

@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+a{
+  text-decoration: underline;
+  cursor: pointer;
+  color: inherit
+}
+
+/* formulario */
+form{
+  width: 450px;
+  margin: 0 auto;
+}
+
+.item_formulario{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.item_formulario label{
+  font-weight: bold;
+  font-size: .9em;
+  margin-bottom: .4em;
+}
+
+input[type="submit"]
+{
+  background-color: rgba(128, 128, 128, 0.615);
+  color: rgb(255, 255, 255);
+  border: 2px solid;
+  font-weight: body;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: 0.4s;
+  text-decoration: underline;
+}

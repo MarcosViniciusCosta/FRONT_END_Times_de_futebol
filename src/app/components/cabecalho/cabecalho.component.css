@@ -1,0 +1,17 @@
+header{
+  background-color: grey;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+
+}
+
+.item_cabecalho
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+}
+

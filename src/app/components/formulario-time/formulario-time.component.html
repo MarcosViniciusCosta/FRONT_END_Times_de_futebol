@@ -1,0 +1,69 @@
+<form (ngSubmit)="enviar()" [formGroup]="formularioTime" #formDir="ngForm">
+
+  <div class="item_formulario">
+    <label for="name"> Nome do time: </label>
+
+      <input *ngIf="timeRecebidoParaEdicao == null; else valor_nome_preenchido"
+      type="text"
+      placeholder="coloque o nome do time"
+      formControlName="name" required/>
+
+    <ng-template #valor_nome_preenchido>
+      <input type="text" placeholder="{{timeRecebidoParaEdicao?.name}}" formControlName="name" required/>
+    </ng-template>
+
+    <div *ngIf="(name.invalid && formDir.submitted)" class="erro_validacao">
+      <p> O nome do time é obrigatório</p>
+    </div>
+
+  </div>
+
+  <div class="item_formulario">
+    <label for="marketValue"> Valor de mercado: </label>
+      <input
+      *ngIf="timeRecebidoParaEdicao == null; else valor_valor_mercado_prenchido"
+      type="number"
+      placeholder="coloque o valor de mercado do time"
+      formControlName="marketValue"
+      required/>
+
+
+    <ng-template #valor_valor_mercado_prenchido>
+      <input type="number"
+      placeholder="{{timeRecebidoParaEdicao?.marketValue}}"
+      formControlName="marketValue"
+      required/>
+    </ng-template>
+
+    <div *ngIf="(marketValue.invalid && formDir.submitted)" class="erro_validacao">
+      <p *ngIf="marketValue.errors?.['min']"> O time tem que possuir valor de mercado acima de 100000</p>
+      <p *ngIf="marketValue.errors?.['required']"> O time tem que ter valor de mercado</p>
+    </div>
+
+  </div>
+
+  <div class="item_formulario">
+    <label for="country"> País do time: </label>
+      <input
+      *ngIf="timeRecebidoParaEdicao == null; else valor_pais_preenchido"
+      type="text"
+      placeholder="coloque o País de origem do time"
+      formControlName="country"
+      required />
+
+    <ng-template #valor_pais_preenchido>
+      <input type="text"
+      placeholder="{{timeRecebidoParaEdicao?.country}}"
+      formControlName="country"
+      required />
+    </ng-template>
+
+    <div *ngIf="(country.invalid && formDir.submitted)" class="erro_validacao">
+        <p *ngIf="country.errors?.['required']"> O time tem que pertencer a um pais</p>
+
+    </div>
+
+  </div>
+
+  <input type="submit" value="{{ texto_botao}}">
+</form>

@@ -64,10 +64,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "times_futebol:build:production"
+              "browserTarget": "times_futebol:build:production",
+              "proxyConfig": "proxy.conf.json"
             },
             "development": {
-              "browserTarget": "times_futebol:build:development"
+              "browserTarget": "times_futebol:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -97,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ebe19527-8f3f-4e1a-a1e7-bcb5383cd5a5"
   }
 }

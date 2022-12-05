@@ -1,0 +1,8 @@
+<div *ngIf="time">
+  <h2>Formulário de edição do time {{time.name}}</h2>
+  <app-formulario-time [texto_botao]="'Editar time'"
+  [timeRecebidoParaEdicao]="time"
+  (onSubmit)="editHandler($event)"
+  ></app-formulario-time>
+</div>
+

@@ -1,0 +1,37 @@
+<div *ngIf="timesTotais.length > 0; else semTimes">
+  <div class="busca">
+    <div class="buscar_time">
+      <form>
+        <label for="buscado"> Buscar time: </label>
+        <input type="text"
+        placeholder="Digite o nome do time "
+        (input)="buscar($event)">
+      </form>
+    </div>
+  </div>
+
+
+  <h2> Times de futebol</h2>
+
+    <table  class="tabela">
+      <tr>
+        <th> Nome </th>
+        <th> Valor </th>
+        <th> País </th>
+        <!--<th> Ação </th> -->
+      </tr>
+
+      <tr *ngFor="let time of timesExibidos">
+        <td> <a routerLink="/times/buscarId/{{time.id}}">
+          {{time.name}} </a>
+        </td>
+        <td>  {{time.marketValue.toFixed(2)}} </td>
+        <td>  {{time.country}} </td>
+        <!-- <td> <button (click)="deleteTime(this.time.id)"> excluir</button> </td> -->
+      </tr>
+    </table>
+</div>
+
+<ng-template #semTimes >
+  <h1> Não há times cadastrados no momento</h1>
+</ng-template>

@@ -1,0 +1,26 @@
+<div *ngIf="time">
+  <table  class="tabela">
+    <tr>
+      <th> Nome </th>
+      <th> Valor </th>
+      <th> País </th>
+    </tr>
+
+    <tr *ngIf="time">
+      <td> {{time.name}} </td>
+      <td>  {{time.marketValue.toFixed(2)}} </td>
+      <td>  {{time.country}} </td>
+    </tr>
+  </table>
+
+  <div class="acoes">
+    <h3>Ações:</h3>
+
+      <button class="atualizar_time">
+        <a routerLink="/times/editar/{{ time.id }}"> Editar</a>
+      </button>
+      <button class="remover_time" (click)="deleteTime(this.time.id)">
+        Excluir
+      </button>
+  </div>
+</div>

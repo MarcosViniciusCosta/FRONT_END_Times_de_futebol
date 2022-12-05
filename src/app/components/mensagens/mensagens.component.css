@@ -1,0 +1,38 @@
+.mensagens{
+  position: fixed;
+  top: 3em;
+  width: 50%;
+  margin-left: 50%;
+  left: -25%;
+  z-index: 10;
+  background-color: #fff;
+  border: 3px solid #dec129;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  }
+
+.cabecalho_mensagens{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.cabecalho_mensagens button{
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.mensagens p{
+  font-size: 1.2em;
+  text-align: center;
+  color: red;
+}
+
+.cabecalho_mensagens h2{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
